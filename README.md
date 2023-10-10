@@ -1,11 +1,18 @@
 1. Perkenalan nodejs & javascript
-   - npm package manager
-   - variable & tipe data
-   - looping & condition
-   - function
-2. Perkenalan framework express & ejs html
-3. HTTP Routing, controller, connect ke database
-4. Develop Todo List Create & Get
-5. Develop Todo List Update & Delete
-6. Deploy ke server render.com & Tanya jawab
-7. Cron job reminder todo list 
+   - Npm package manager
+   - Variable & tipe data
+   - Looping & condition
+   - Function
+2. Perkenalan framework express & EJS html
+   - HTTP Routing
+   - Controller & EJS response
+   - Membuat form dan menangkap request body
+   - Connect ke database MySQL
+3. Develop Todo List Create & Get
+   - Configurasi MySQL
+   - Configurasi squelize & buat migration database
+   - Buat model Todo
+   - Buat repository CRUD
+4. Develop Todo List Update & Delete
+5. Deploy ke server render.com
+6. Cron job reminder todo list 
