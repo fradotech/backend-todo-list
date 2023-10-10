@@ -15,7 +15,7 @@
    - Konfigurasi MySQL
    - Konfigurasi ORM Squelize
    - Buat migration database
-   - Buat model Todo (name, status, deadline, createdAt)
+   - Buat model Todo (name, status, deadline, createdAt, dll)
    - Create Todo dan simpan ke database
 4. Menyelesaikan CRUD Todo List
    - Get Todo List dan tampilkan ke tabel
