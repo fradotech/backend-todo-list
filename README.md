@@ -15,17 +15,17 @@
    - Konfigurasi MySQL
    - Konfigurasi ORM Squelize
    - Buat migration database
-   - Buat model Todo (name, status, deadline, createdAt, dll)
+   - Buat model `Task` Todo (name, status, deadline, createdAt, dll)
    - Create Todo dan simpan ke database
 4. Menyelesaikan CRUD Todo List
    - Get Todo List dan tampilkan ke tabel
-   - Update status Todo (Todo, On Progress, Selesai)
+   - Update status `Task` (Todo, On Progress, Selesai)
    - Delete Todo
 5. Sesi sharing & deploy aplikasi ke web hosting gratis
    - Buat akun github
    - Setup database di supabase.com
    - Deploy ke server render.com
 6. Sesi sharing & coba buat reminder menggunakan bot telegram
-   - Reminder Todo yang mendekati deadline dengan cronjob node-cron
+   - Reminder `Task` yang mendekati deadline dengan cronjob node-cron
    - Buat bot telegram untuk mengirim message ke akun kita
    - Kirim reminder ke bot telegram node-telegram-bot-api
