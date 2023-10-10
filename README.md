@@ -1,20 +1,23 @@
 1. Perkenalan nodejs & javascript
    - Npm package manager
-   - Perkenalan javascript variable, kondisi, dan function
+   - Perkenalan javascript variable
+   - Perkenalan javascript pengkondisian
+   - Perkenalan javascript function
    - Perkenalan framework express
-   - HTTP Routing
+   - HTTP Routing dengan express
 2. Perkenalan template engine EJS html
-   - Controller & EJS response
+   - Konfigurasi EJS untuk tampilan client side
+   - Membuat Controller & EJS HTML response
    - CSS bootstrap
    - Membuat tampilan tabel Todo List
    - Membuat modal form dan mengirim request body
-3. Setup database MySQL & mulai simpan data dari form ke database
-   - Configurasi MySQL
-   - Configurasi squelize
+4. Setup database MySQL & mulai simpan data dari form ke database
+   - Konfigurasi MySQL
+   - Konfigurasi ORM Squelize
    - Buat migration database
    - Buat model Todo (name, status, deadline, createdAt)
    - Create Todo dan simpan ke database
-4. Develop Todo List update, Delete, lalu deploy
+5. Develop Todo List update, Delete, lalu deploy
    - Get Todo List dan tampilkan ke tabel
    - Update status Todo (Todo, On Progress, Selesai)
    - Delete Todo
