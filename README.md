@@ -1,1 +1,7 @@
-1. Membuat server dengan http module https://www.digitalocean.com/community/tutorials/how-to-create-a-web-server-in-node-js-with-the-http-module
+1. Perkenalan nodejs & javascript
+   - npm package manager
+2. Membuat server dengan http module & perkenalan framework express
+3. HTTP Routing, controller, connect ke database
+4. Develop Todo List Create & Get
+5. Develop Todo List Update & Delete
+6. Deploy ke server render.com & Tanya jawab
