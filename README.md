@@ -18,5 +18,9 @@
 4. Develop Todo List update, Delete, lalu deploy
    - Update status Todo (Todo, On Progress, Selesai)
    - Delete Todo
+5. Deploy aplikasi ke server gratis
+   - Buat akun github
+   - Setup database di supabase.com
    - Deploy ke server render.com
-6. Cron job reminder todo list kirim lewat email
+7. Cron job reminder todo list kirim lewat email
+   - Kirim reminder ke bot telegram https://www.npmjs.com/package/node-telegram-bot-api
