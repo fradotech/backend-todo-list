@@ -5,27 +5,27 @@
    - Perkenalan javascript function
    - Perkenalan framework express
    - HTTP Routing dengan express
-2. Perkenalan template engine EJS html
+2. Inisiasi Tampilan Todo List & perkenalan template engine EJS html
    - Konfigurasi EJS untuk tampilan client side
    - Membuat Controller & EJS HTML response
    - CSS bootstrap
    - Membuat tampilan tabel Todo List
    - Membuat modal form dan mengirim request body
-4. Setup database MySQL & mulai simpan data dari form ke database
+3. Setup database MySQL & mulai simpan data dari form ke database
    - Konfigurasi MySQL
    - Konfigurasi ORM Squelize
    - Buat migration database
    - Buat model Todo (name, status, deadline, createdAt)
    - Create Todo dan simpan ke database
-5. Develop Todo List update, Delete, lalu deploy
+4. Menyelesaikan CRUD Todo List
    - Get Todo List dan tampilkan ke tabel
    - Update status Todo (Todo, On Progress, Selesai)
    - Delete Todo
-6. Deploy aplikasi ke server gratis
+5. Sesi sharing & deploy aplikasi ke web hosting gratis
    - Buat akun github
    - Setup database di supabase.com
    - Deploy ke server render.com
-7. Cron job reminder todo list kirim lewat email
+6. Sesi sharing & coba buat reminder menggunakan bot telegram
    - Reminder Todo yang mendekati deadline dengan cronjob node-cron
    - Buat bot telegram untuk mengirim message ke akun kita
    - Kirim reminder ke bot telegram node-telegram-bot-api
