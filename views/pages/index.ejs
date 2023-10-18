@@ -12,8 +12,10 @@
         </tr>
       </thead>
       <tbody>
+        <% tasks.forEach(element => {
+
         <tr>
-          <td>Mark</td>
+          <td><%= element.name %></td>
           <td>Otto</td>
           <td>@mdo</td>
         </tr>
@@ -22,6 +24,8 @@
           <td>Thornton</td>
           <td>@fat</td>
         </tr>
+
+        }); %>
       </tbody>
     </table>
   </body>
