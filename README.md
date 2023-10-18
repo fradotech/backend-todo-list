@@ -1,31 +1,32 @@
 1. Perkenalan nodejs & javascript
    - Npm package manager
-   - Perkenalan javascript variable
-   - Perkenalan javascript pengkondisian
-   - Perkenalan javascript function
    - Perkenalan framework express
    - HTTP Routing dengan express
    - Tips restart server otomatis dengan nodemon
-2. Inisiasi Tampilan Todo List & perkenalan template engine EJS html
    - Konfigurasi EJS untuk tampilan client side
    - Membuat Controller & EJS HTML response
    - CSS bootstrap
    - Membuat tampilan tabel Todo List
    - Membuat modal form dan mengirim request body
-3. Setup database MySQL & mulai simpan data dari form ke database
+2. Setup database MySQL & mulai simpan data dari form ke database
    - Konfigurasi MySQL
    - Konfigurasi ORM Squelize
    - Buat migration database
    - Buat model `Task` Todo (name, status, deadline, createdAt, dll)
    - Create Todo dan simpan ke database
-4. Menyelesaikan CRUD Todo List
+3. Menyelesaikan CRUD Todo List
    - Get Todo List dan tampilkan ke tabel
-   - Update status `Task` (Todo, On Progress, Selesai)
+   - Update `Task`
    - Delete Todo
-5. Sesi sharing & deploy aplikasi ke web hosting gratis
+4. Sesi sharing & deploy aplikasi ke web hosting gratis
    - Buat akun github
    - Setup database di supabase.com
    - Deploy ke server render.com
+5. Authentication
+   - Buat table user
+   - Create user seeder
+   - Login email & password hashing
+   - Auth guard
 6. Sesi sharing & coba buat reminder menggunakan bot telegram
    - Reminder `Task` yang mendekati deadline dengan cronjob node-cron
    - Buat bot telegram untuk mengirim message ke akun kita

@@ -25,5 +25,10 @@ export const taskController = {
     res.render("pages/task-create");
   },
 
+  create: (req, res) => {
+    res.send({ data: tasks });
+  },
+
   updateStatusDone: null,
+  delete: null,
 };
