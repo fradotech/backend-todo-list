@@ -2,31 +2,9 @@
 <html lang="en">
   <%- include('../partials/head'); %>
   <body class="container">
-    <table class="table">
-      <div>
-        <thead>
-          <tr>
-            <th scope="col">Nama</th>
-            <th scope="col">Deskripsi</th>
-            <th scope="col">Status</th>
-            <th scope="col">Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% tasks.forEach(task => { %>
-
-          <tr>
-            <td><%= task.name %></td>
-            <td><%= task.description %></td>
-            <td><%= task.status %></td>
-            <td>
-              <button class="btn btn-primary">Selesai</button>
-            </td>
-          </tr>
-
-          <% }); %>
-        </tbody>
-      </div>
-    </table>
+    <div>
+      <a class="btn btn-primary" href="/create">+ Create</a>
+    </div>
+    <%- include('../partials/task-table'); %>
   </body>
 </html>
