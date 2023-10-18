@@ -5,6 +5,7 @@
    - Perkenalan javascript function
    - Perkenalan framework express
    - HTTP Routing dengan express
+   - Tips restart server otomatis dengan nodemon
 2. Inisiasi Tampilan Todo List & perkenalan template engine EJS html
    - Konfigurasi EJS untuk tampilan client side
    - Membuat Controller & EJS HTML response
