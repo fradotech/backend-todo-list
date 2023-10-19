@@ -3,7 +3,20 @@
     <tr>
       <th scope="col">Nama</th>
       <th scope="col">Deskripsi</th>
-      <th scope="col">Status</th>
+      <th scope="col">
+        <form action="/" method="get">
+          <div style="display: flex">
+            Status
+            <select name="status">
+              <option value="All">All</option>
+              <option value="Todo">Todo</option>
+              <option value="Doing">Doing</option>
+              <option value="Done">Done</option>
+            </select>
+            <button type="submit">Filter</button>
+          </div>
+        </form>
+      </th>
       <th scope="col">Deadline</th>
       <th scope="col">Aksi</th>
     </tr>

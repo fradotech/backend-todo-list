@@ -3,8 +3,16 @@ import { validateRequired } from "../utils/validators.js";
 
 export const taskController = {
   list: (req, res) => {
-    Task.findAll().then((tasks) => {
-      res.render("pages/index", { tasks });
+    if (req.query.status == "All") {
+      req.query.status = null;
+    }
+
+    Task.findAll({
+      where: req.query.status && {
+        status: req.query.status,
+      },
+    }).then((tasks) => {
+      res.render("pages/index", { tasks, query: req.query });
     });
   },
 
@@ -26,7 +34,7 @@ export const taskController = {
       name: req.body.name,
       description: req.body.description,
       status: req.body.status,
-      deadline: req.body.deadline,
+      deadline: req.body.deadline || null,
     }).then((tasks) => {
       res.redirect("/");
     });

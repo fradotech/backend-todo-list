@@ -15,20 +15,19 @@
    - Buat model `Task` Todo (name, status, deadline, createdAt, dll)
    - Create Todo dan simpan ke database
    - Validasi request body API
-3. Menyelesaikan CRUD Todo List
+3. Menyelesaikan CRUD Todo List & deploy aplikasi ke web hosting gratis
    - Get Todo List dan tampilkan ke tabel
    - Update `Task`
    - Delete Todo
-4. Sesi sharing & deploy aplikasi ke web hosting gratis
    - Buat akun github
    - Setup database di supabase.com
    - Deploy ke server render.com
-5. Authentication
+4. Authentication
    - Buat table user
    - Create user seeder
    - Login email & password hashing
-   - Auth guard
-6. Sesi sharing & coba buat reminder menggunakan bot telegram
+   - Auth guard middleware
+5. Sesi sharing & coba buat reminder menggunakan bot telegram
    - Reminder `Task` yang mendekati deadline dengan cronjob node-cron
    - Buat bot telegram untuk mengirim message ke akun kita
    - Kirim reminder ke bot telegram node-telegram-bot-api

@@ -2,6 +2,9 @@
 <html lang="en">
   <%- include('../partials/head'); %>
   <body class="container">
+    <a type="submit" href="/">< Back</a>
+    <br />
+    <br />
     <form action="/create" method="post" style="max-width: 500px">
       <div class="mb-3">
         <label for="name" class="form-label">* Nama</label>
@@ -21,7 +24,7 @@
       </div>
       <div class="mb-3">
         <label for="status" class="form-label">Deadline</label>
-        <input type="date" class="form-control" name="deadline" />
+        <input type="datetime-local" class="form-control" name="deadline" />
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
