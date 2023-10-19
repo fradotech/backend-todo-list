@@ -1,11 +1,14 @@
 import bodyParser from "body-parser";
 import express from "express";
-import { taskController } from "./controller/task.controller.js";
+import { taskController } from "./controllers/task.controller.js";
+import { createConnection } from "./database/database.connection.js";
 
 const app = express();
 
 app.use(bodyParser());
 app.set("view engine", "ejs");
+
+createConnection();
 
 // Routing EJS
 app.get("/", taskController.list);

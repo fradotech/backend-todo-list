@@ -4,6 +4,7 @@
       <th scope="col">Nama</th>
       <th scope="col">Deskripsi</th>
       <th scope="col">Status</th>
+      <th scope="col">Deadline</th>
       <th scope="col">Aksi</th>
     </tr>
   </thead>
@@ -13,9 +14,20 @@
     <tr>
       <td><%= task.name %></td>
       <td><%= task.description %></td>
-      <td><%= task.status %></td>
+      <% if(task.status=="Doing") {%>
+      <td><span class="badge bg-warning"><%= task.status %></span></td>
+      <% }else if(task.status=="Todo"){ %>
+      <td><span class="badge bg-info"><%= task.status %></span></td>
+      <% }else if(task.status=="Done"){ %>
+      <td><span class="badge bg-success"><%= task.status %></span></td>
+      <% }else{ %>
+      <td><span class="badge bg-secondary"><%= task.status %></span></td>
+
+      <% } %>
+      <td><%= task.deadline %></td>
       <td>
-        <button class="btn btn-primary">Selesai</button>
+        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-danger">Delete</button>
       </td>
     </tr>
 

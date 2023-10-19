@@ -14,6 +14,7 @@
    - Buat migration database
    - Buat model `Task` Todo (name, status, deadline, createdAt, dll)
    - Create Todo dan simpan ke database
+   - Validasi request body API
 3. Menyelesaikan CRUD Todo List
    - Get Todo List dan tampilkan ke tabel
    - Update `Task`
