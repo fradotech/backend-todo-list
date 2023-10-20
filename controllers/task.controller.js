@@ -3,25 +3,25 @@ import { ejsFormatDatetime } from "../utils/ejsFormatDatetime.js";
 import { validateRequired } from "../utils/validators.js";
 
 export const taskController = {
-  list: (req, res) => {
+  list: async (req, res) => {
     if (req.query.status == "All") {
       req.query.status = null;
     }
 
-    Task.findAll({
+    const tasks = await Task.findAll({
       where: req.query.status && {
         status: req.query.status,
       },
-    }).then((tasks) => {
-      res.render("pages/index", { tasks, query: req.query });
     });
+
+    res.render("pages/index", { tasks, query: req.query });
   },
 
   createPage: (req, res) => {
     res.render("pages/task-form", { title: "Create Task" });
   },
 
-  create: (req, res) => {
+  create: async (req, res) => {
     const isValidName = validateRequired(req, "name");
     const isValidStatus = validateRequired(req, "status");
 
@@ -31,31 +31,31 @@ export const taskController = {
       });
     }
 
-    Task.create({
+    await Task.create({
       name: req.body.name,
       description: req.body.description,
       status: req.body.status,
       deadline: req.body.deadline || null,
-    }).then((tasks) => {
-      res.redirect("/");
     });
+
+    res.redirect("/");
   },
 
-  updatePage: (req, res) => {
-    Task.findOne({
+  updatePage: async (req, res) => {
+    const task = await Task.findOne({
       where: {
         id: req.params.id,
       },
-    }).then((task) => {
-      if (task.dataValues.deadline) {
-        task.dataValues.deadline = ejsFormatDatetime(task.dataValues.deadline);
-      }
-
-      res.render("pages/task-form", { title: "Update Task", task });
     });
+
+    if (task.dataValues.deadline) {
+      task.dataValues.deadline = ejsFormatDatetime(task.dataValues.deadline);
+    }
+
+    res.render("pages/task-form", { title: "Update Task", task });
   },
 
-  update: (req, res) => {
+  update: async (req, res) => {
     const isValidName = validateRequired(req, "name");
     const isValidStatus = validateRequired(req, "status");
 
@@ -77,18 +77,18 @@ export const taskController = {
           id: req.body.id,
         },
       }
-    ).then(() => {
-      res.redirect("/");
-    });
+    );
+
+    res.redirect("/");
   },
 
-  delete: (req, res) => {
-    Task.destroy({
+  delete: async (req, res) => {
+    await Task.destroy({
       where: {
         id: req.body.id,
       },
-    }).then(() => {
-      res.redirect("/");
     });
+
+    res.redirect("/");
   },
 };
