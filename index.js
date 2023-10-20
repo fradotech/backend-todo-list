@@ -13,10 +13,13 @@ createConnection();
 // Routing EJS
 app.get("/", taskController.list);
 app.get("/create", taskController.createPage);
+app.get("/update/:id", taskController.updatePage);
 
 // Routing API
 app.post("/create", taskController.create);
+app.post("/update", taskController.update);
+app.post("/delete", taskController.delete);
 
-app.listen(3000, () => {
-  console.log("Example app listening on port 3000!");
+app.listen(3001, () => {
+  console.log("Example app listening on port 3001!");
 });
