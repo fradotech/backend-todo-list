@@ -3,16 +3,16 @@
   <%- include('../partials/head'); %>
   <body class="container">
     <div style="display: flex">
-      <a class="btn btn-warning" href="/">< Back </a>
+      <a class="btn btn-warning" href="/tasks">< Back </a>
       <h3 style="margin: 0 16px"><%= title %></h3>
     </div>
     <br />
 
     <form
     <% if(title=='Create Task') {%>
-     action="/create"
+     action="/tasks/create"
      <% } else { %>
-      action="/update"
+      action="/tasks/update"
       <% } %>
 
 

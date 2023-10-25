@@ -4,7 +4,7 @@
       <th scope="col">Nama</th>
       <th scope="col">Deskripsi</th>
       <th scope="col">
-        <form action="/" method="get">
+        <form action="/tasks" method="get">
           <div style="display: flex">
             Status
             <select name="status">
@@ -39,10 +39,12 @@
       <% } %>
       <td><%= task.deadline %></td>
       <td>
-        <a class="btn btn-primary" href="/update/<%= task.id %>">Update</a>
+        <a class="btn btn-primary" href="/tasks/update/<%= task.id %>"
+          >Update</a
+        >
       </td>
       <td>
-        <form action="/delete" method="post">
+        <form action="/tasks/delete" method="post">
           <input type="hidden" name="id" required value="<%= task.id %>" />
           <button
             class="btn btn-danger"

@@ -14,7 +14,7 @@ export const taskController = {
       },
     });
 
-    res.render("pages/index", { tasks, query: req.query });
+    res.render("pages/task-list", { tasks, query: req.query });
   },
 
   createPage: (req, res) => {
@@ -38,7 +38,7 @@ export const taskController = {
       deadline: req.body.deadline || null,
     });
 
-    res.redirect("/");
+    res.redirect("/tasks");
   },
 
   updatePage: async (req, res) => {
@@ -79,7 +79,7 @@ export const taskController = {
       }
     );
 
-    res.redirect("/");
+    res.redirect("/tasks");
   },
 
   delete: async (req, res) => {
@@ -89,6 +89,6 @@ export const taskController = {
       },
     });
 
-    res.redirect("/");
+    res.redirect("/tasks");
   },
 };
