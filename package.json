@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "./node_modules/.bin/nodemon ."
+    "dev": "./node_modules/.bin/nodemon .",
+    "start": "node ."
   },
   "type": "module",
   "dependencies": {
