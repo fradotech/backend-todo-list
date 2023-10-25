@@ -4,6 +4,7 @@ import session from "express-session";
 import { authController } from "./controllers/auth.controller.js";
 import { indexController } from "./controllers/index.controller.js";
 import { taskController } from "./controllers/task.controller.js";
+import { userController } from "./controllers/user.controller.js";
 import { createConnection } from "./database/database.connection.js";
 import { authMiddleware } from "./middleware/auth.middleware.js";
 
@@ -24,13 +25,22 @@ app.get("/logout", authController.logout);
 // Authorization
 app.use(authMiddleware);
 
-// Routing TASK
-// Routing EJS
+// Routing USER EJS
+app.get("/users", userController.list);
+app.get("/users/create", userController.createPage);
+app.get("/users/update/:id", userController.updatePage);
+
+// Routing API USER
+app.post("/users/create", userController.create);
+app.post("/users/update", userController.update);
+app.post("/users/delete", userController.delete);
+
+// Routing TASK EJS
 app.get("/tasks", taskController.list);
 app.get("/tasks/create", taskController.createPage);
 app.get("/tasks/update/:id", taskController.updatePage);
 
-// Routing API
+// Routing API TASK
 app.post("/tasks/create", taskController.create);
 app.post("/tasks/update", taskController.update);
 app.post("/tasks/delete", taskController.delete);
