@@ -1,4 +1,5 @@
 import Task from "../models/task.js";
+import User from "../models/user.js";
 import { sequelize } from "./database.config.js";
 
 export const createConnection = () =>
@@ -13,9 +14,10 @@ export const createConnection = () =>
 
 // Models
 Task;
+User;
 
 sequelize
-  .sync()
+  .sync({ alter: true })
   .then(() => {
     console.log("Table sync successfully!");
   })
