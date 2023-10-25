@@ -1,12 +1,15 @@
 import bodyParser from "body-parser";
 import express from "express";
+import session from "express-session";
 import { authController } from "./controllers/auth.controller.js";
 import { indexController } from "./controllers/index.controller.js";
 import { taskController } from "./controllers/task.controller.js";
 import { createConnection } from "./database/database.connection.js";
+import { authMiddleware } from "./middleware/auth.middleware.js";
 
 const app = express();
 
+app.use(session({ secret: "todo_list" }));
 app.use(bodyParser());
 app.set("view engine", "ejs");
 
@@ -16,6 +19,10 @@ createConnection();
 app.get("/", indexController.index);
 app.get("/login", authController.loginPage);
 app.post("/login", authController.login);
+app.get("/logout", authController.logout);
+
+// Authorization
+app.use(authMiddleware);
 
 // Routing TASK
 // Routing EJS

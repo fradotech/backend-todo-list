@@ -8,6 +8,8 @@ export const taskController = {
       req.query.status = null;
     }
 
+    console.log({ user: req.session.user });
+
     const tasks = await Task.findAll({
       where: req.query.status && {
         status: req.query.status,
