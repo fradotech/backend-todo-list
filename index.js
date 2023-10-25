@@ -1,5 +1,6 @@
 import bodyParser from "body-parser";
 import express from "express";
+import { authController } from "./controllers/auth.controller.js";
 import { indexController } from "./controllers/index.controller.js";
 import { taskController } from "./controllers/task.controller.js";
 import { createConnection } from "./database/database.connection.js";
@@ -11,7 +12,10 @@ app.set("view engine", "ejs");
 
 createConnection();
 
+// Routing EJS
 app.get("/", indexController.index);
+app.get("/login", authController.loginPage);
+app.post("/login", authController.login);
 
 // Routing TASK
 // Routing EJS
