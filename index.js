@@ -46,7 +46,7 @@ app.post("/tasks/create", taskController.create);
 app.post("/tasks/update", taskController.update);
 app.post("/tasks/delete", taskController.delete);
 
-cron.schedule("* * * * * *", taskScheduler.reminderDeadline);
+cron.schedule("* * * * *", taskScheduler.reminderDeadline);
 
 app.listen(3001, () => {
   console.log("Example app listening on port 3001!");
