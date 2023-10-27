@@ -1,12 +1,13 @@
 import bodyParser from "body-parser";
 import express from "express";
 import session from "express-session";
+import cron from "node-cron";
 import { authController } from "./controllers/auth.controller.js";
 import { indexController } from "./controllers/index.controller.js";
 import { taskController } from "./controllers/task.controller.js";
 import { userController } from "./controllers/user.controller.js";
 import { createConnection } from "./database/database.connection.js";
-import { authMiddleware } from "./middleware/auth.middleware.js";
+import { taskScheduler } from "./scheduler/task.scheduler.js";
 
 const app = express();
 
@@ -23,7 +24,7 @@ app.post("/login", authController.login);
 app.get("/logout", authController.logout);
 
 // Authorization
-app.use(authMiddleware);
+// app.use(authMiddleware);
 
 // Routing USER EJS
 app.get("/users", userController.list);
@@ -44,6 +45,8 @@ app.get("/tasks/update/:id", taskController.updatePage);
 app.post("/tasks/create", taskController.create);
 app.post("/tasks/update", taskController.update);
 app.post("/tasks/delete", taskController.delete);
+
+cron.schedule("* * * * * *", taskScheduler.reminderDeadline);
 
 app.listen(3001, () => {
   console.log("Example app listening on port 3001!");
